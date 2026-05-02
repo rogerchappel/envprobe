@@ -1,0 +1,10 @@
+{
+  "project": "envprobe",
+  "status": "mvp-implemented",
+  "lanes": ["cli", "engine", "reports", "safety", "validation"],
+  "validation": ["npm test", "bash scripts/validate.sh"],
+  "safety": {
+    "network": "disabled by default",
+    "secrets": "presence-only env signal names"
+  }
+}

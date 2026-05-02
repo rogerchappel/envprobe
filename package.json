@@ -9,10 +9,17 @@
   },
   "files": [
     "src",
+    "docs",
+    "examples",
+    "requirements",
+    "scripts",
     "README.md"
   ],
   "scripts": {
-    "test": "node --test"
+    "check": "node --check src/index.js && node --check src/cli.js",
+    "test": "node --test",
+    "build": "node --check src/index.js && node --check src/cli.js",
+    "smoke": "bash scripts/smoke.sh"
   },
   "keywords": [
     "agents",
@@ -22,5 +29,8 @@
     "cli"
   ],
   "author": "StackForge User",
-  "license": "MIT"
+  "license": "MIT",
+  "bin": {
+    "envprobe": "./src/cli.js"
+  }
 }

@@ -1,0 +1,5 @@
+{
+  "tools": ["node"],
+  "files": ["README.md"],
+  "env": []
+}
