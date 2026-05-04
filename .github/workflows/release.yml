@@ -1,0 +1,53 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+permissions:
+  contents: write
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install package dependencies
+        run: npm ci
+
+      - name: Install ReleaseBox
+        run: |
+          git clone --branch v0.1.0 --depth 1 https://github.com/rogerchappel/releasebox.git /tmp/releasebox
+          npm ci --prefix /tmp/releasebox
+          npm run build --prefix /tmp/releasebox
+
+      - name: Run ReleaseBox readiness check
+        run: node /tmp/releasebox/bin/releasebox.js check .
+
+      - name: Run release check
+        run: npm run release:check
+
+      - name: Pack npm artifact
+        run: npm pack
+
+      - name: Generate ReleaseBox release notes
+        run: node /tmp/releasebox/bin/releasebox.js notes . > RELEASE_NOTES.md
+
+      - name: Create GitHub release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh release create "${GITHUB_REF_NAME}" --notes-file RELEASE_NOTES.md *.tgz
