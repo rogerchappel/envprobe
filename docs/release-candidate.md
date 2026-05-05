@@ -1,20 +1,33 @@
 # Release candidate readiness
 
-Generated: 2026-05-05T21:24:47Z
+Generated: 2026-05-05T21:27:32Z
 Branch: `release-candidate/readiness`
-Base: `origin/main`
+Base: `main`
 
 ## Verification
 
 Status: PASS
 
 Checks run:
+- `npm ci`
 - `npm run release:check`
 - `bash scripts/validate.sh`
 - `node releasebox check .`
 
 ## Check output summary
 
+    ## npm ci
+    ```
+    npm ci
+    ```
+    ```text
+    
+    up to date, audited 1 package in 121ms
+    
+    found 0 vulnerabilities
+    ```
+    RESULT: 0 (1s)
+    
     ## npm run release:check
     ```
     npm run release:check
@@ -32,11 +45,11 @@ Checks run:
     > envprobe@0.1.0 test
     > node --test
     
-    ✔ scan reports tools, files, and env signals without values (489.343583ms)
-    ✔ scan can reuse an explicit cache until fresh is requested (102.840084ms)
-    ✔ match identifies missing capabilities (0.341166ms)
-    ✔ markdown report is stable and redacted (0.2845ms)
-    ✔ cli scan and match run end-to-end (1417.92525ms)
+    ✔ scan reports tools, files, and env signals without values (152.569292ms)
+    ✔ scan can reuse an explicit cache until fresh is requested (41.073292ms)
+    ✔ match identifies missing capabilities (0.20075ms)
+    ✔ markdown report is stable and redacted (0.153333ms)
+    ✔ cli scan and match run end-to-end (633.658416ms)
     ℹ tests 5
     ℹ suites 0
     ℹ pass 5
@@ -44,7 +57,7 @@ Checks run:
     ℹ cancelled 0
     ℹ skipped 0
     ℹ todo 0
-    ℹ duration_ms 2170.368791
+    ℹ duration_ms 897.996708
     
     > envprobe@0.1.0 smoke
     > bash scripts/smoke.sh
@@ -61,6 +74,7 @@ Checks run:
     npm notice 1.5kB docs/ORCHESTRATION.md
     npm notice 3.9kB docs/PRD.md
     npm notice 297B docs/README.md
+    npm notice 4.6kB docs/release-candidate.md
     npm notice 1.7kB docs/TASKS.md
     npm notice 408B examples/agent-handoff.md
     npm notice 850B package.json
@@ -73,15 +87,15 @@ Checks run:
     npm notice name: envprobe
     npm notice version: 0.1.0
     npm notice filename: envprobe-0.1.0.tgz
-    npm notice package size: 11.8 kB
-    npm notice unpacked size: 32.5 kB
-    npm notice shasum: 2d278259fb9a1bba11e6e9b83a866d44a658d781
-    npm notice integrity: sha512-5iqdiTEawupLg[...]9mUzzthR1j81w==
-    npm notice total files: 14
+    npm notice package size: 12.9 kB
+    npm notice unpacked size: 37.1 kB
+    npm notice shasum: 2a55883ac344208474260c16441724db083da81a
+    npm notice integrity: sha512-9/Z7eoCMvqRSW[...]q4rs0UDAdrNZg==
+    npm notice total files: 15
     npm notice
     envprobe-0.1.0.tgz
     ```
-    RESULT: 0 (5s)
+    RESULT: 0 (2s)
     
     ## bash scripts/validate.sh
     ```
@@ -112,11 +126,11 @@ Checks run:
     > envprobe@0.1.0 test
     > node --test
     
-    ✔ scan reports tools, files, and env signals without values (143.207083ms)
-    ✔ scan can reuse an explicit cache until fresh is requested (38.617125ms)
-    ✔ match identifies missing capabilities (0.190208ms)
-    ✔ markdown report is stable and redacted (0.150708ms)
-    ✔ cli scan and match run end-to-end (703.580666ms)
+    ✔ scan reports tools, files, and env signals without values (162.953125ms)
+    ✔ scan can reuse an explicit cache until fresh is requested (49.702542ms)
+    ✔ match identifies missing capabilities (0.234583ms)
+    ✔ markdown report is stable and redacted (0.162709ms)
+    ✔ cli scan and match run end-to-end (693.888125ms)
     ℹ tests 5
     ℹ suites 0
     ℹ pass 5
@@ -124,7 +138,7 @@ Checks run:
     ℹ cancelled 0
     ℹ skipped 0
     ℹ todo 0
-    ℹ duration_ms 962.173292
+    ℹ duration_ms 982.940792
     PASS: package script: test
     
     > envprobe@0.1.0 build
