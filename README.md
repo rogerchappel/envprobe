@@ -26,6 +26,7 @@ For local development from this repository:
 
 ```sh
 npm install
+npm run check
 npm test
 bash scripts/validate.sh
 ```
@@ -130,8 +131,10 @@ See [examples/agent-handoff.md](examples/agent-handoff.md) for a compact handoff
 
 ```sh
 npm test
+npm run check
 npm run build
 npm run smoke
+npm run release:check
 bash scripts/validate.sh
 ```
 

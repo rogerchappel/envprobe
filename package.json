@@ -29,8 +29,16 @@
     "scanner",
     "cli"
   ],
-  "author": "StackForge User",
+  "author": "Roger Chappel",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rogerchappel/envprobe.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rogerchappel/envprobe/issues"
+  },
+  "homepage": "https://github.com/rogerchappel/envprobe#readme",
   "bin": {
     "envprobe": "./src/cli.js"
   }
