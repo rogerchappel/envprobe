@@ -13,7 +13,9 @@
     "examples",
     "requirements",
     "scripts",
-    "README.md"
+    "README.md",
+    "LICENSE",
+    "SECURITY.md"
   ],
   "scripts": {
     "check": "node --check src/index.js && node --check src/cli.js",
