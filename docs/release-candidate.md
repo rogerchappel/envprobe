@@ -35,7 +35,7 @@ Checks run:
     ```text
     
     > envprobe@0.1.0 release:check
-    > npm run build && npm test && npm run smoke && npm pack --dry-run
+    > npm run build && npm test && npm run smoke && npm run package:smoke
     
     
     > envprobe@0.1.0 build
