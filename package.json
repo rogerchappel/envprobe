@@ -22,7 +22,8 @@
     "test": "node --test",
     "build": "node --check src/index.js && node --check src/cli.js",
     "smoke": "bash scripts/smoke.sh",
-    "release:check": "npm run build && npm test && npm run smoke && npm pack --dry-run"
+    "package:smoke": "npm pack --dry-run",
+    "release:check": "npm run build && npm test && npm run smoke && npm run package:smoke"
   },
   "keywords": [
     "agents",
