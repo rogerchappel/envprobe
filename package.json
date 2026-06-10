@@ -15,7 +15,9 @@
     "scripts",
     "README.md",
     "LICENSE",
-    "SECURITY.md"
+    "SECURITY.md",
+    "CHANGELOG.md",
+    "CONTRIBUTING.md"
   ],
   "scripts": {
     "check": "node --check src/index.js && node --check src/cli.js",
