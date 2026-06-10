@@ -150,6 +150,19 @@ bash scripts/validate.sh
 - [Contributing guide](CONTRIBUTING.md)
 - [Security policy](SECURITY.md)
 
+## Development
+
+Use Node.js 20 or newer. Run these checks before opening a PR:
+
+```sh
+npm run build
+npm run check
+npm test
+npm run smoke
+npm run package:smoke
+npm run release:check
+```
+
 ## License
 
 MIT
