@@ -1,0 +1,8 @@
+{
+  "name": "envprobe-demo-project",
+  "private": true,
+  "scripts": {
+    "test": "node --test"
+  }
+}
+
