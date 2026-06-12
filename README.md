@@ -127,6 +127,18 @@ Attach `ENVPROBE.md` to the task brief. The receiving agent gets capability fact
 
 See [examples/agent-handoff.md](examples/agent-handoff.md) for a compact handoff snippet.
 
+For a fixture-backed version of this flow, run:
+
+```sh
+bash demo/run-agent-readiness.sh
+```
+
+The script scans `examples/demo-project`, writes both JSON and Markdown output,
+and checks the result against `requirements/oss-cli.json`.
+
+Promotion drafts for this workflow live in
+[docs/promo/social-hooks.md](docs/promo/social-hooks.md).
+
 ## Verify
 
 ```sh
