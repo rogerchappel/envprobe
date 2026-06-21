@@ -126,6 +126,8 @@ envprobe match envprobe.json requirements/oss-cli.json
 Attach `ENVPROBE.md` to the task brief. The receiving agent gets capability facts and gaps without secret leakage.
 
 See [examples/agent-handoff.md](examples/agent-handoff.md) for a compact handoff snippet.
+See [examples/ci-dispatch.md](examples/ci-dispatch.md) for a CI dispatch
+readiness example.
 
 For a fixture-backed version of this flow, run:
 
