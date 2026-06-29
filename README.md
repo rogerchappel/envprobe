@@ -31,6 +31,12 @@ npm test
 bash scripts/validate.sh
 ```
 
+Run the full release gate before changing CLI output or package metadata:
+
+```sh
+npm run release:check
+```
+
 ## CLI reference
 
 ```sh
