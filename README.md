@@ -4,6 +4,20 @@ envprobe is a local-first capability scanner for agentic development workflows. 
 
 It reports tool versions, project signals, missing expected files, Git state, OS/disk basics, and environment **signal names only**. It never prints secret values and makes no network calls in core flows.
 
+
+## Quickstart
+
+Run the tool from a fresh checkout:
+
+```sh
+npm install
+npm run build
+node src/cli.js --help
+npm test
+```
+
+The help command is a quick smoke test for the CLI entrypoint, and `npm test` runs the committed regression suite before you depend on the output.
+
 ## 60-second demo
 
 ```sh
